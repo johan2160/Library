@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Library</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <div class="flex">
+      <i class="ri-book-3-line" id="logo"></i>
+      <h1>Personal Library</h1>
+    </div>
+    <i class="ri-moon-line" id="theme-toggler"></i>
+  </header>
+  <main>
+    <section class="add-books">
+      <button id="add-book" class="add-book">Add book</button>
+
+      <dialog class="modal" id="modal">
+        <div class="flex-horizontal">
+          <h3>Add book</h3>
+          <i class="ri-close-circle-line close-model-btn" id="close-modal-btn"></i>
+        </div>
+        <p>Add books that you've read or intent to read in the future.</p>
+
+        <form class="form" method="dialog">
+
+          <div class="grid">
+            <label for="book-title">Title</label>
+            <input type="text" id="book-title" placeholder="Beyond Good and Evil">
+            <label for="book-author">Author</label>
+            <input type="text" id="book-author" placeholder="Friedrich Nietzsche">
+            <label for="book-pages">Pages</label>
+            <input type="number" id="book-pages" placeholder="280">
+          </div>
+
+          <button class="confirm-btn" id="confirm-btn" type="submit">Confirm</button>
+        </form>
+      </dialog>
+    </section>
+    <section class="your-books">
+      <div class="book">
+        <h2 class="book__title" id="book__title">Beyond Good and Evil</h2>
+        <h3 class="book__author" id="book__author">Friedrich Nietzsche</h3>
+        <p class="book__pages" id="book__pages">116 pages</p>
+        <div class="book__modify" id="book__modify">
+          <button class="book__state" id="book__state">Unread</button>
+          <i class="ri-delete-bin-line" id="book__delete"></i>
+        </div>
+        <svg id="#book__bookmark" width="17" height="37" viewBox="0 0 17 37" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0H17V37L8.075 29L0 37V0Z" fill="#CBD5E1" />
+        </svg>
+
+      </div>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>
