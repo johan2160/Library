@@ -121,13 +121,17 @@ header #logo {
   font-size: 32px;
 }
 
-header #theme-toggler {
+header #moon, header #sun {
   position: absolute;
   color: var(--theme-toggler-m);
   right: 12px;
   bottom: -48px;
   font-size: 24px;
   cursor: pointer;
+}
+
+header #sun {
+  display: none;
 }
 
 /* Main section */
@@ -198,9 +202,12 @@ main {
   cursor: pointer;
 }
 
-.modal p {
+.modal .modal__info, .modal .modal__question  {
   font-size: var(--modal__subtitle-txt);
   color: var(--modal-txt-light);
+}
+
+.modal .modal__info {
   margin-bottom: 32px;
 }
 
@@ -249,6 +256,15 @@ form .grid input::placeholder {
   color: var(--modal-txt-light);
 }
 
+.form .modal__question {
+  text-align: right;
+}
+
+.book-state-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
 form .confirm-btn {
   background-color: var(--modal-primary);
   color: var(--modal-btn-text);
@@ -257,6 +273,11 @@ form .confirm-btn {
   border-radius: var(--brad);
   font-size: var(--modal__btn-txt);
   cursor: pointer;
+  transition: opacity 0.25s;
+}
+
+form .confirm-btn:hover {
+  opacity: 0.9;
 }
 
 /* Your books section */
@@ -348,7 +369,7 @@ form .confirm-btn {
     font-size: 64px;
   }
 
-  header #theme-toggler {
+  header #moon, header #sun {
     position: static;
     color: var(--white);
   }

@@ -1,14 +1,22 @@
 // Getting elements from the DOM
-const themeToggler = document.querySelector("#theme-toggler");
+const moon = document.querySelector("#moon");
+const sun = document.querySelector("#sun");
 const modal = document.querySelector("#modal");
 const addBook = document.querySelector("#add-book");
 const closeModal = document.querySelector("#close-modal-btn");
 const bookState = document.querySelectorAll(".book__state");
 
-themeToggler.addEventListener('click', () => {
-  document.body.classList.toggle('dark-theme-variables');
+moon.addEventListener('click', () => {
+  document.body.classList.add('dark-theme-variables');
+  moon.style.display = 'none'
+  sun.style.display = 'block'
 })
 
+sun.addEventListener('click', () => {
+  document.body.classList.remove('dark-theme-variables');
+  sun.style.display = 'none'
+  moon.style.display = 'block'
+})
 
 // Adding event listeners
 addBook.addEventListener('click', () => {

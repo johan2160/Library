@@ -17,7 +17,8 @@
       <i class="ri-book-3-line" id="logo"></i>
       <h1>Personal Library</h1>
     </div>
-    <i class="ri-moon-line" id="theme-toggler"></i>
+    <i class="ri-moon-line" id="moon"></i>
+    <i class="ri-sun-line" id="sun"></i>
   </header>
   <main>
     <section class="add-books">
@@ -28,7 +29,7 @@
           <h3>Add book</h3>
           <i class="ri-close-circle-line close-model-btn" id="close-modal-btn"></i>
         </div>
-        <p>Add books that you've read or intent to read in the future.</p>
+        <p class="modal__info">Add books that you've read or intent to read in the future.</p>
 
         <form class="form" method="dialog">
 
@@ -39,6 +40,17 @@
             <input type="text" id="book-author" placeholder="Friedrich Nietzsche">
             <label for="book-pages">Pages</label>
             <input type="number" id="book-pages" placeholder="280">
+            <p class="modal__question">Have you read the book?</p>
+            <div class="book-state-wrapper">
+              <div>
+                <input type="radio" id="read" name="book-state">
+                <label for="read">Read</label>
+              </div>
+              <div>
+                <input type="radio" id="unread" name="book-state">
+                <label for="unread">Unread</label>
+              </div>
+            </div>
           </div>
 
           <button class="confirm-btn" id="confirm-btn" type="submit">Confirm</button>
