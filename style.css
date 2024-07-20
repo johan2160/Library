@@ -353,6 +353,44 @@ form .confirm-btn:hover {
   cursor: pointer;
 }
 
+.book__delete-wrapper {
+  display: none;
+}
+
+.book__delete-question, .book__deletion-warning {
+  font-size: 0.875rem;
+}
+
+.book__delete-question {
+  margin-bottom: 0.875rem;
+  font-weight: 600;
+}
+
+.book__deletion-warning {
+  margin-bottom: 7.25rem;
+  color: var(--slate200);
+  font-weight: normal;
+}
+
+.book__delete-wrapper button {
+  padding: .5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  font-weight: semibold;
+  cursor: pointer;
+  transition: opacity 0.25s;
+}
+
+.book__delete-wrapper button:hover {
+  opacity: .9;
+}
+
+.book__confirm-deletion {
+  background: var(--danger);
+  color: var(--white);
+  margin-left: .5rem;
+}
+
 /* Media queries */
 @media screen and (min-width: 770px) {
   header {
