@@ -35,19 +35,19 @@
 
           <div class="grid">
             <label for="book-title">Title</label>
-            <input type="text" id="book-title" placeholder="Beyond Good and Evil">
-            <label for="book-author">Author</label>
+            <input type="text" id="book-title" maxlength="55" placeholder="Beyond Good and Evil">
+            <label for="book-author" maxlength="55">Author</label>
             <input type="text" id="book-author" placeholder="Friedrich Nietzsche">
             <label for="book-pages">Pages</label>
             <input type="number" id="book-pages" placeholder="280">
             <label class="modal__question"><b>Have you read the book?</b></label>
             <div class="book-state-wrapper">
               <div>
-                <input type="radio" id="read" name="book-state">
+                <input type="radio" id="read" name="book-state" value="read">
                 <label for="read">Read</label>
               </div>
               <div>
-                <input type="radio" id="unread" name="book-state">
+                <input type="radio" id="unread" name="book-state" value="unread">
                 <label for="unread">Unread</label>
               </div>
             </div>
@@ -83,7 +83,7 @@
       </div>
     </section>
   </main>
-  <script src="funcionality.js"></script>
+  <script src="functionality.js"></script>
   <script src="main.js"></script>
 </body>
 
