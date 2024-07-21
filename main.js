@@ -5,7 +5,6 @@ const sun = document.querySelector("#sun");
 const modal = document.querySelector("#modal");
 const addBook = document.querySelector("#add-book");
 const closeModal = document.querySelector("#close-modal-btn");
-const bookState = document.querySelectorAll(".book__state");
 
 const book = document.querySelector("#book");
 const infoWrapper = document.querySelector("#book__info-wrapper");
@@ -35,20 +34,6 @@ addBook.addEventListener('click', () => {
 closeModal.addEventListener('click', () => {
   modal.close();
 })
-
-// Changing book state
-bookState.forEach(book => {
-  book.addEventListener('click', () => {
-
-    if (book.innerText === "Unread") {
-      book.innerText = "Read";
-      book.style.background = "var(--read)"
-    } else {
-      book.innerText = "Unread";
-      book.style.background = "var(--unread)"
-    }
-  })
-});
 
 bookDelete.addEventListener('click', () => {
   infoWrapper.style.display = 'none';
