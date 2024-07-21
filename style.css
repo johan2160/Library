@@ -243,7 +243,7 @@ form .grid input {
   border: 1px solid var(--input-border);
   border-radius: 6px;
   background-color: var(--modal-bg);
-  color: var(--modal-txt-light);
+  color: var(--modal-txt);
   padding: 8px 12px;
   font-size: var(--modal__input-txt);
 }
