@@ -1,6 +1,5 @@
 /*============ GOOGLE FONTS ============*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 /*============ VARIABLES ============*/
 :root {
@@ -18,11 +17,11 @@
   --slate400: #94a3b8;
   --slate700: #334155;
   --modal-txt: #000;
-  --modal-txt-light: #64748B;
+  --modal-txt-light: #64748b;
   --modal-primary: #334155;
   --modal-bg: #fff;
-  --input-border: #CBD5E1;
-  --placeholder-color: #0F172A;
+  --input-border: #cbd5e1;
+  --placeholder-color: #0f172a;
   --modal-btn-text: #fff;
 
   /* ----- Fonts and Typography ----- */
@@ -44,8 +43,8 @@
   --modal__btn-txt: 16px;
 
   /* ----- Sizing ----- */
-  --desktop-horizontal-p: 167px; 
-  --tablet-horizontal-p: 103px; 
+  --desktop-horizontal-p: 167px;
+  --tablet-horizontal-p: 103px;
   --header__v: 48px;
   --header__vp-mobile: 32px;
   --book__width: 257px;
@@ -121,7 +120,8 @@ header #logo {
   font-size: 32px;
 }
 
-header #moon, header #sun {
+header #moon,
+header #sun {
   position: absolute;
   color: var(--theme-toggler-m);
   right: 12px;
@@ -202,7 +202,8 @@ main {
   cursor: pointer;
 }
 
-.modal .modal__info, .modal .modal__question  {
+.modal .modal__info,
+.modal .modal__question {
   font-size: var(--modal__subtitle-txt);
   color: var(--modal-txt-light);
 }
@@ -289,6 +290,7 @@ form .confirm-btn:hover {
   column-gap: 50px;
   flex-wrap: wrap;
   max-width: var(--cards__mxwidth);
+  margin-bottom: 5rem;
 }
 
 .your-books .book {
@@ -348,7 +350,7 @@ form .confirm-btn:hover {
   background-color: var(--read);
 }
 
-.book__modify #book__delete {
+.book__modify .ri-delete-bin-line {
   font-size: 24px;
   cursor: pointer;
 }
@@ -357,7 +359,8 @@ form .confirm-btn:hover {
   display: none;
 }
 
-.book__delete-question, .book__deletion-warning {
+.book__delete-question,
+.book__deletion-warning {
   font-size: 0.875rem;
 }
 
@@ -373,7 +376,7 @@ form .confirm-btn:hover {
 }
 
 .book__delete-wrapper button {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.375rem;
   border: none;
   font-weight: semibold;
@@ -382,13 +385,13 @@ form .confirm-btn:hover {
 }
 
 .book__delete-wrapper button:hover {
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .book__confirm-deletion {
   background: var(--danger);
   color: var(--white);
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 /* Media queries */
@@ -407,9 +410,16 @@ form .confirm-btn:hover {
     font-size: 64px;
   }
 
-  header #moon, header #sun {
+  header #moon,
+  header #sun {
     position: static;
     color: var(--white);
+    transition: transform 0.3s ease;
+  }
+
+  header #moon:hover,
+  header #sun:hover {
+    transform: rotate(45deg);
   }
 
   main {
@@ -421,7 +431,7 @@ form .confirm-btn:hover {
   .add-books .add-book {
     --addbtn-padding: 10px 40px;
     font-size: var(--addbtn-txt-t);
-    align-items: start; 
+    align-items: start;
   }
 }
 
@@ -433,5 +443,9 @@ form .confirm-btn:hover {
   main {
     justify-content: center;
     align-items: center;
+  }
+
+  .your-books {
+    margin-bottom: 0;
   }
 }
