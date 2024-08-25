@@ -6,41 +6,44 @@ const modal = document.querySelector("#modal");
 const addBook = document.querySelector("#add-book");
 const closeModal = document.querySelector("#close-modal-btn");
 
-const book = document.querySelector("#book");
-const infoWrapper = document.querySelector("#book__info-wrapper");
-const deleteWrapper = document.querySelector("#book__delete-wrapper");
-const bookDelete = document.querySelector("#book__delete");
+// Function to apply the saved theme from localStorage
+function applySavedTheme() {
+  const savedTheme = localStorage.getItem("theme");
 
-const cancelDeletion = document.querySelector("#book__cancel-deletion");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme-variables");
+    moon.style.display = "none";
+    sun.style.display = "block";
+  } else {
+    document.body.classList.remove("dark-theme-variables");
+    sun.style.display = "none";
+    moon.style.display = "block";
+  }
+}
 
-// Theme toggle funcionality
-moon.addEventListener('click', () => {
-  document.body.classList.add('dark-theme-variables');
-  moon.style.display = 'none'
-  sun.style.display = 'block'
-})
+// Initial theme setup
+document.addEventListener("DOMContentLoaded", applySavedTheme);
 
-sun.addEventListener('click', () => {
-  document.body.classList.remove('dark-theme-variables');
-  sun.style.display = 'none'
-  moon.style.display = 'block'
-})
+// Theme toggle functionality
+moon.addEventListener("click", () => {
+  document.body.classList.add("dark-theme-variables");
+  moon.style.display = "none";
+  sun.style.display = "block";
+  localStorage.setItem("theme", "dark"); // Save the theme to localStorage
+});
+
+sun.addEventListener("click", () => {
+  document.body.classList.remove("dark-theme-variables");
+  sun.style.display = "none";
+  moon.style.display = "block";
+  localStorage.setItem("theme", "light"); // Save the theme to localStorage
+});
 
 // Showing and hiding the Modal
-addBook.addEventListener('click', () => {
+addBook.addEventListener("click", () => {
   modal.showModal();
-})
+});
 
-closeModal.addEventListener('click', () => {
+closeModal.addEventListener("click", () => {
   modal.close();
-})
-
-bookDelete.addEventListener('click', () => {
-  infoWrapper.style.display = 'none';
-  deleteWrapper.style.display = 'block';
-})
-
-cancelDeletion.addEventListener('click', () => {
-  deleteWrapper.style.display = 'none';
-  infoWrapper.style.display = 'block';
-})
+});
