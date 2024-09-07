@@ -79,7 +79,7 @@ function addBookToLibrary() {
       bookPages.value,
       selectedState
     );
-    myLibrary.push(newBook);
+    myLibrary.unshift(newBook);
     saveLibraryToLocalStorage(); // Save to localStorage
     displayBooks();
     resetInputs();
