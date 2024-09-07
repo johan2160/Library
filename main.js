@@ -46,4 +46,5 @@ addBook.addEventListener("click", () => {
 
 closeModal.addEventListener("click", () => {
   modal.close();
+  resetInputs();
 });
